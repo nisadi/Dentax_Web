@@ -55,14 +55,14 @@ export default function OurSolution() {
 
           {/* White card */}
           <div className="bg-white rounded-[20px] shadow-2xl p-[10px]">
-            <div className="w-full aspect-video rounded-2xl overflow-hidden">
+            <div className="relative w-full overflow-hidden rounded-2xl" style={{ aspectRatio: "16/9" }}>
               <iframe
                 src="https://www.youtube.com/embed/HfSFVlM6voU"
                 title="Dentax Product Demo"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 loading="lazy"
-                className="w-full h-full rounded-2xl"
+                className="absolute inset-0 w-full h-full rounded-2xl"
               />
             </div>
           </div>

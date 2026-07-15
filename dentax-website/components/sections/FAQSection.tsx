@@ -102,9 +102,9 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section id="contact" className="py-24 px-6 lg:px-8 bg-white">
+    <section id="contact" className="py-16 md:py-20 lg:py-24 px-5 md:px-8 lg:px-6 bg-white overflow-hidden">
       <div className="mx-auto max-w-[1440px]">
-        <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-12 lg:gap-20 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-10 lg:gap-20 items-start">
 
           {/* ── Left content ── */}
           <motion.div
@@ -112,24 +112,17 @@ export default function FAQSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55, ease: "easeOut" as const }}
-            className="flex flex-col gap-5 lg:sticky lg:top-28"
+            className="flex flex-col gap-4 lg:sticky lg:top-28"
           >
-            {/* Label */}
             <span className="self-start rounded-full bg-[#DDF7EA] px-3 py-1 text-[11px] font-semibold text-[#16A34A]">
               Common Questions
             </span>
-
-            {/* Heading */}
-            <h2
-              className="font-bold text-[40px] lg:text-[54px] text-[#111827] leading-[1.05]"
-            >
+            <h2 className="font-bold text-3xl md:text-4xl lg:text-[54px] text-[#111827] leading-[1.05]">
               Frequently asked
               <br />
               <span className="text-[#16A34A]">questions</span>
             </h2>
-
-            {/* Description */}
-            <p className="text-[16px] text-[#6B7280] leading-[1.8]">
+            <p className="text-sm md:text-base text-[#6B7280] leading-[1.8]">
               Have questions about your next visit, or treatments? We believe in
               transparent, stress-free dental care. Find clear, straightforward
               answers to our most common inquiries below.
@@ -142,7 +135,7 @@ export default function FAQSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55, delay: 0.1, ease: "easeOut" as const }}
-            className="flex flex-col gap-5"
+            className="flex flex-col gap-4"
           >
             {faqs.map((faq, i) => (
               <FAQItem

@@ -76,45 +76,38 @@ const features: Feature[] = [
 
 export default function WhyDentax() {
   return (
-    <section className="bg-white py-12 lg:py-16 border-t border-gray-100">
-      <div className="mx-auto max-w-[1440px] px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] items-center gap-8 lg:gap-12">
+    <section className="bg-white py-10 lg:py-14 border-t border-gray-100 overflow-hidden">
+      <div className="mx-auto max-w-[1440px] px-5 md:px-8 lg:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr] items-center gap-6 lg:gap-10">
           {/* Left Column */}
           <div className="flex flex-col text-left">
-            <h2 className="text-[28px] font-bold text-[#111827] leading-tight">
+            <h2 className="text-2xl lg:text-[28px] font-bold text-[#111827] leading-tight">
               Why Dentax?
             </h2>
-            <p className="mt-3 text-[14px] leading-[20px] text-[#4B5563]">
-              Powerful features designed 
-              <br />
-              specifically for modern dental practices
+            <p className="mt-2 text-sm leading-relaxed text-[#4B5563]">
+              Powerful features designed specifically for modern dental practices
             </p>
           </div>
 
           {/* Right Column - Green Card */}
-          <div className="w-full rounded-[12px] bg-gradient-to-r from-[#0F8F5B] to-[#0A5C3A] px-6 lg:px-8 py-6 lg:py-7 shadow-sm">
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-8">
+          <div className="w-full rounded-[12px] bg-gradient-to-r from-[#0F8F5B] to-[#0A5C3A] px-5 lg:px-8 py-5 lg:py-7 shadow-sm">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-6">
               {features.map(({ icon: Icon, customIcon, title, description }) => (
-                <div key={title} className="flex items-start gap-2.5">
+                <div key={title} className="flex items-start gap-2">
                   {/* Icon */}
                   <div className="shrink-0 mt-0.5">
                     {Icon ? (
-                      <Icon
-                        size={20}
-                        strokeWidth={2}
-                        className="text-white"
-                      />
+                      <Icon size={18} strokeWidth={2} className="text-white" />
                     ) : (
                       customIcon
                     )}
                   </div>
-
-                  {/* Text (Title & Description) */}
+                  {/* Text */}
                   <div className="flex flex-col">
-                    <h3 className="whitespace-pre-line text-[14px] font-semibold leading-[18px] text-white">
+                    <h3 className="whitespace-pre-line text-[13px] font-semibold leading-[17px] text-white">
                       {title}
                     </h3>
-                    <p className="mt-1.5 whitespace-pre-line text-[11px] leading-[15px] text-white/75">
+                    <p className="mt-1 whitespace-pre-line text-[11px] leading-[14px] text-white/75">
                       {description}
                     </p>
                   </div>
