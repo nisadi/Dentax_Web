@@ -102,7 +102,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section id="contact" className="py-16 md:py-20 lg:py-24 px-5 md:px-8 lg:px-6 bg-white overflow-hidden">
+    <section id="contact" className="py-16 md:py-20 lg:py-14 px-5 md:px-8 lg:px-6 bg-white overflow-hidden">
       <div className="mx-auto max-w-[1440px]">
         <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-10 lg:gap-20 items-start">
 

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
 import { Menu, X } from "lucide-react";
+import RequestDemoModal from "@/components/RequestDemoModal/RequestDemoModal";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -16,6 +17,7 @@ const navLinks = [
 export default function Navbar() {
   const [active, setActive] = useState("#home");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [demoOpen, setDemoOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,6 +35,7 @@ export default function Navbar() {
   }, []);
 
   return (
+    <>
     <header
       className="sticky top-0 z-50 bg-white w-full"
       style={{ boxShadow: "0 2px 20px rgba(0,0,0,0.05)" }}
@@ -83,14 +86,14 @@ export default function Navbar() {
             Login
           </a>
 
-          <a
-            href="#contact"
+          <button
+            onClick={() => setDemoOpen(true)}
             aria-label="Request Demo"
-            className="rounded-full bg-[#0F8F5B] px-7 py-2 text-sm font-medium text-white transition-colors hover:bg-[#0A7A4C]"
-            style={{ paddingTop: 14, paddingBottom: 14 }}
+            className="rounded-full bg-[#0F8F5B] px-7 text-sm font-medium text-white transition-colors hover:bg-[#0A7A4C]"
+            style={{ paddingTop: 14, paddingBottom: 14, border: "none", cursor: "pointer" }}
           >
             Request Demo
-          </a>
+          </button>
         </div>
 
         {/* Mobile Hamburger */}
@@ -121,9 +124,12 @@ export default function Navbar() {
             +94 77 867 3863
           </a>
           <a href="#login" className="w-full rounded-full border border-[#0F8F5B] py-2 text-center text-sm text-[#0F8F5B]">Login</a>
-          <a href="#contact" className="w-full rounded-full bg-[#0F8F5B] py-2 text-center text-sm text-white">Request Demo</a>
+          <button onClick={() => { setDemoOpen(true); setMenuOpen(false); }} className="w-full rounded-full bg-[#0F8F5B] py-2 text-center text-sm text-white" style={{ border: "none", cursor: "pointer" }}>Request Demo</button>
         </div>
       )}
     </header>
+
+    <RequestDemoModal open={demoOpen} onClose={() => setDemoOpen(false)} />
+    </>
   );
 }

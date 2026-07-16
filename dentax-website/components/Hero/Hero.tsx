@@ -1,5 +1,9 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
+import RequestDemoModal from "@/components/RequestDemoModal/RequestDemoModal";
 
 const features = [
   "Patient Management",
@@ -13,6 +17,7 @@ const features = [
 ];
 
 export default function Hero() {
+  const [demoOpen, setDemoOpen] = useState(false);
   return (
     <section
       id="home"
@@ -51,20 +56,22 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="#contact"
+            <button
+              onClick={() => setDemoOpen(true)}
               aria-label="Start Free Trial"
               className="flex h-[48px] sm:h-[52px] items-center justify-center rounded-xl bg-[#0F8F5B] px-6 sm:px-8 text-sm font-semibold text-white transition-colors hover:bg-[#0A7A4C] w-full sm:w-auto"
+              style={{ border: "none", cursor: "pointer" }}
             >
               Start Free Trial
-            </a>
-            <a
-              href="#contact"
+            </button>
+            <button
+              onClick={() => setDemoOpen(true)}
               aria-label="Request a Demo"
               className="flex h-[48px] sm:h-[52px] items-center justify-center rounded-xl border border-[#0F8F5B] px-6 sm:px-8 text-sm font-semibold text-[#0F8F5B] transition-colors hover:bg-[#0F8F5B] hover:text-white w-full sm:w-auto"
+              style={{ cursor: "pointer" }}
             >
               Request a Demo
-            </a>
+            </button>
           </div>
 
           {/* Bottom Info */}
@@ -87,6 +94,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      <RequestDemoModal open={demoOpen} onClose={() => setDemoOpen(false)} />
     </section>
   );
 }

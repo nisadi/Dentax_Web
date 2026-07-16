@@ -37,7 +37,7 @@ const fadeUp = {
 
 export default function ContactCTA() {
   return (
-    <section id="contact" className="py-10 md:py-20 lg:py-24 px-5 md:px-8 lg:px-6 bg-[#F7FCFB] overflow-hidden">
+    <section id="footcontact" className="py-8 md:py-16 lg:py-14 px-5 md:px-8 lg:px-6 bg-[#F7FCFB] overflow-hidden">
       <div className="mx-auto max-w-[1440px] flex flex-col gap-8 lg:gap-6">
 
         {/* ── Card 1: Still Have Questions? ── */}

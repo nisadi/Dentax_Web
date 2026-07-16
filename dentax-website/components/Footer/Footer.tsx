@@ -8,31 +8,43 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 const navLinks = [
   { label: "Solutions", href: "#solutions" },
-  { label: "Pricing",   href: "#pricing" },
-  { label: "FAQ's",     href: "#contact" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "FAQ's", href: "#contact" },
 ];
 
 const featureLinks = [
   { label: "A platform for every role", href: "#features" },
-  { label: "AI Assistance",             href: "#AI" },
-  { label: "Multi language",            href: "#AI" },
+  { label: "AI Assistance", href: "#AI" },
+  { label: "Multi language", href: "#AI" },
 ];
 
 const contactItems = [
-  { icon: Phone,  label: "0778673863",        href: "tel:0778673863" },
-  { icon: Mail,   label: "info@dentax.com",    href: "mailto:info@globalpearlventures.com" },
+  { icon: Phone, label: "0778673863", href: "tel:0778673863" },
+  { icon: Mail, label: "info@dentax.com", href: "mailto:info@globalpearlventures.com" },
   { icon: MapPin, label: "Colombo, Sri Lanka", href: "#" },
 ];
 
 const bottomLinks = [
-  { label: "Privacy Policy",   href: "#" },
-  { label: "Terms of Service", href: "#" },
-  { label: "Cookie Policy",    href: "#" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms of Service", href: "/terms-of-service" },
+  { label: "Cookie Policy", href: "/cookie-policy" },
 ];
 
-function ColHeading({ children }: { children: React.ReactNode }) {
+function ColHeading({ children, href }: { children: React.ReactNode; href?: string }) {
+  if (href) {
+    return (
+      <a
+        href={href}
+        className="text-[17px] font-semibold text-[#111827] mb-5 hover:text-[#16964A] transition-colors duration-200 inline-block"
+      >
+        {children}
+      </a>
+    );
+  }
   return (
-    <h3 className="text-[17px] font-semibold text-[#111827] mb-5">{children}</h3>
+    <h3 className="text-[17px] font-semibold text-[#111827] mb-5">
+      {children}
+    </h3>
   );
 }
 
@@ -48,7 +60,7 @@ export default function Footer() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, ease: "easeOut" as const }}
-        className="bg-white pt-[72px] pb-12"
+        className="bg-white pt-[50px] pb-12"
       >
         <div
           className="mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.8fr_1fr_1fr_1fr] gap-y-9 md:gap-10 lg:gap-[80px] items-start"
@@ -56,7 +68,7 @@ export default function Footer() {
         >
           {/* Col 1 — Logo + Description */}
           <div className="flex flex-col">
-            <a href="#home" aria-label="Dentax home" className="mb-5 inline-block">
+            <a href="/" aria-label="Dentax home" className="mb-5 inline-block">
               <Image
                 src="/dentax.png"
                 alt="Dentax"
@@ -74,7 +86,7 @@ export default function Footer() {
 
           {/* Col 2 — Navigation */}
           <nav aria-label="Footer navigation">
-            <ColHeading>Home</ColHeading>
+            <ColHeading href="/">Home</ColHeading>
             <ul className="flex flex-col gap-[18px]">
               {navLinks.map(({ label, href }) => (
                 <li key={label}>
@@ -146,15 +158,15 @@ export default function Footer() {
             © 2026 Dentax. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-1">
-            <a href="#" className="text-[14px] text-white/95 hover:underline transition-all duration-200">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-[14px] text-white/95 hover:underline transition-all duration-200">
-              Terms of Service
-            </a>
-            <a href="#" className="text-[14px] text-white/95 hover:underline transition-all duration-200">
-              Cookie Policy
-            </a>
+            {bottomLinks.map(({ label, href }) => (
+              <a
+                key={label}
+                href={href}
+                className="text-[14px] text-white/95 hover:underline transition-all duration-200"
+              >
+                {label}
+              </a>
+            ))}
           </div>
         </div>
       </div>
