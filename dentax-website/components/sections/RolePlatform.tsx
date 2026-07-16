@@ -106,7 +106,7 @@ export default function RolePlatform() {
 
   return (
     <section
-      id="solutions"
+      id="features"
       className="bg-gradient-to-b from-[#1D9B52] via-[#188847] to-[#146D39] py-16 lg:py-20 px-5 md:px-8 lg:px-6 overflow-hidden"
     >
       <div className="mx-auto max-w-[1440px]">

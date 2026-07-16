@@ -168,7 +168,7 @@ function ModuleCard({ mod, index }: { mod: Module; index: number }) {
 
 export default function FeaturesOverview() {
   return (
-    <section id="features-overview" className="bg-white py-16 lg:py-20">
+    <section id="AI" className="bg-white py-16 lg:py-20">
       <div className="mx-auto max-w-[1440px] px-6 flex flex-col gap-10">
 
         {/* ── Part 1: Complete Modules ── */}
