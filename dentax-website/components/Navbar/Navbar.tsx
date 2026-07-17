@@ -43,7 +43,7 @@ export default function Navbar() {
       <div className="mx-auto flex h-[72px] max-w-[1440px] items-center justify-between px-6">
         {/* Logo */}
         <a href="#home" aria-label="Dentax home">
-          <Image src="/dentax.png" alt="Dentax" height={15} width={55} priority />
+          <Image src="/dentax1.png" alt="Dentax" height={15} width={55} priority />
         </a>
 
         {/* Desktop Nav */}
