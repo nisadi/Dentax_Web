@@ -22,20 +22,19 @@ const DEFAULT_SUBJECT = "Requesting a demonstration of the Dentax system";
 
 const DEFAULT_MESSAGE = `Dear Sir/Madam,
 
-I am writing to express my interest in the Dentax Smart Dental Practice Management Software.
+I am writing to express my interest in the Dentax Smart Dental Practice Management Software. 
 
 I would like to request a live demonstration of the platform to better understand its features and how it can support our dental practice.
 
 Please contact me at your earliest convenience using the information provided above.
 
 Thank you for your time.
-
 Best Regards,`;
 
 const CONTACT_ITEMS = [
   { icon: Mail,      label: "Email",          value: "info@globalpearlventures.com" },
   { icon: Phone,     label: "Phone",          value: "We'll contact you back"       },
-  { icon: Building2, label: "Business Hours", value: "Mon – Fri\n9AM – 6PM"         },
+  { icon: Building2, label: "Business Hours", value: "Monday – Friday\n9AM – 6PM"         },
 ];
 
 // ─── Spinner SVG ─────────────────────────────────────────────────────────────
@@ -71,7 +70,7 @@ function Field({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex flex-col gap-[6px]">
+    <div className="flex flex-col gap-[4px]">
       <label className="text-[14px] font-semibold text-[#374151]">
         {label}
         {required && <span className="text-[#EF4444] ml-[3px]">*</span>}
@@ -116,11 +115,11 @@ function TextInput({
         registration.onBlur?.(e);
       }}
       style={{
-        height: 56,
+        height: 45,
         border: `1px solid ${hasError ? "#EF4444" : focused ? "#16964A" : "#D1D5DB"}`,
         borderRadius: 16,
         padding: "0 16px",
-        fontSize: 15,
+        fontSize: 14,
         color: "#111827",
         background: disabled ? "#F9FAFB" : "#FFFFFF",
         outline: "none",
@@ -161,8 +160,8 @@ function TextArea({
       style={{
         border: `1px solid ${hasError ? "#EF4444" : focused ? "#16964A" : "#D1D5DB"}`,
         borderRadius: 16,
-        padding: 16,
-        fontSize: 15,
+        padding: 14,
+        fontSize: 13,
         color: "#111827",
         background: disabled ? "#F9FAFB" : "#FFFFFF",
         outline: "none",
@@ -442,7 +441,7 @@ export default function RequestDemoModal({
               className="relative flex flex-col bg-white overflow-hidden w-full"
               style={{
                 maxWidth: 1000,
-                maxHeight: "90vh",
+                maxHeight: "100vh",
                 borderRadius: 28,
                 boxShadow: "0 30px 80px rgba(0,0,0,0.18)",
               }}
@@ -465,12 +464,12 @@ export default function RequestDemoModal({
                         <MessageSquare size={24} color="#16964A" strokeWidth={2} />
                       </div>
                       <div>
-                        <h2 style={{ fontSize: 22, fontWeight: 700, color: "#111827", lineHeight: 1.2 }}>
+                        <h2 style={{ fontSize: 20, fontWeight: 700, color: "#111827", lineHeight: 1.2 }}>
                           Get in Touch
                         </h2>
                         <p
                           className="hidden sm:block"
-                          style={{ fontSize: 14, color: "#6B7280", marginTop: 3 }}
+                          style={{ fontSize: 12, color: "#6B7280", marginTop: 3 }}
                         >
                           We&apos;d love to hear from you! Fill out the form below and
                           we&apos;ll get back to you as soon as possible.
@@ -496,7 +495,7 @@ export default function RequestDemoModal({
                   </div>
 
                   {/* ── Scrollable body ── */}
-                  <div className="overflow-y-auto flex-1" style={{ padding: "28px 32px 32px" }}>
+                  <div className="overflow-y-auto flex-1" style={{ padding: "16px 18px 18px" }}>
 
                     {/* Error toast */}
                     <AnimatePresence>
@@ -510,18 +509,18 @@ export default function RequestDemoModal({
 
                     <div
                       className="grid grid-cols-1 lg:grid-cols-[360px_1fr]"
-                      style={{ gap: 36, alignItems: "start" }}
+                      style={{ gap: 18, alignItems: "start" }}
                     >
                       {/* ── Contact card ── */}
                       <div
-                        className="lg:sticky lg:top-0 rounded-[24px] flex flex-col gap-6"
+                        className="lg:sticky lg:top-0 rounded-[24px] flex flex-col gap-8"
                         style={{
-                          background: "linear-gradient(160deg,#1B9B52,#0F6A39)",
+                          background: "linear-gradient(160deg,#ffffff,#0EA54A)",
                           padding: 32,
-                          color: "#FFFFFF",
+                          color: "#A8FFBB",
                         }}
                       >
-                        <h3 style={{ fontSize: 22, fontWeight: 700, color: "#FFFFFF", lineHeight: 1.2 }}>
+                        <h3 style={{ fontSize: 22, fontWeight: 700, color: "#0f6a39", lineHeight: 1.2 }}>
                           Contact Information
                         </h3>
 
@@ -536,23 +535,23 @@ export default function RequestDemoModal({
                                 background: "rgba(255,255,255,0.10)",
                                 border: "1px solid rgba(255,255,255,0.15)",
                                 borderRadius: 18,
-                                padding: 18,
+                                padding: 20,
                               }}
                             >
                               <div
                                 className="flex items-center justify-center shrink-0"
                                 style={{
                                   width: 40, height: 40,
-                                  background: "rgba(255,255,255,0.15)",
+                                  background: "#E5F5EF",
                                   borderRadius: 12,
                                 }}
                               >
-                                <Icon size={18} color="#FFFFFF" strokeWidth={2} />
+                                <Icon size={18} color="#0f6a39" strokeWidth={2} />
                               </div>
                               <div>
                                 <p style={{
-                                  fontSize: 12, fontWeight: 600,
-                                  color: "rgba(255,255,255,0.65)",
+                                  fontSize: 12, fontWeight: 700,
+                                  color: "#000000",
                                   textTransform: "uppercase",
                                   letterSpacing: "0.06em",
                                   marginBottom: 4,
@@ -560,7 +559,7 @@ export default function RequestDemoModal({
                                   {label}
                                 </p>
                                 {value.split("\n").map((line, i) => (
-                                  <p key={i} style={{ fontSize: 15, fontWeight: 500, color: "#FFFFFF", lineHeight: 1.5 }}>
+                                  <p key={i} style={{ fontSize: 14, fontWeight: 400, color: "#000000", lineHeight: 1.5 }}>
                                     {line}
                                   </p>
                                 ))}
@@ -574,7 +573,7 @@ export default function RequestDemoModal({
                       <form
                         onSubmit={handleSubmit(onSubmit)}
                         noValidate
-                        className="flex flex-col gap-6"
+                        className="flex flex-col gap-5"
                         style={{ cursor: isSubmitting ? "wait" : "auto" }}
                       >
                         {/* Row 1 */}
@@ -603,7 +602,7 @@ export default function RequestDemoModal({
                         </div>
 
                         {/* Row 2 */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: 24 }}>
+                        <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: 20 }}>
                           <Field label="Organization">
                             <TextInput
                               registration={register("organization")}
@@ -639,7 +638,7 @@ export default function RequestDemoModal({
                             disabled={isSubmitting}
                             className="flex items-center justify-center font-semibold text-[15px] text-[#374151]"
                             style={{
-                              height: 52,
+                              height: 50,
                               paddingLeft: 28, paddingRight: 28,
                               borderRadius: 14,
                               border: "1px solid #D1D5DB",
@@ -665,7 +664,7 @@ export default function RequestDemoModal({
                             transition={{ duration: 0.2 }}
                             className="flex items-center justify-center gap-2 font-semibold text-[15px] text-white"
                             style={{
-                              height: 52,
+                              height: 50,
                               paddingLeft: 32, paddingRight: 32,
                               borderRadius: 14,
                               background: isSubmitting ? "#6B9E7A" : "#16964A",

@@ -62,7 +62,7 @@ export default function Hero() {
               className="flex h-[48px] sm:h-[52px] items-center justify-center rounded-xl bg-[#0F8F5B] px-6 sm:px-8 text-sm font-semibold text-white transition-colors hover:bg-[#0A7A4C] w-full sm:w-auto"
               style={{ border: "none", cursor: "pointer" }}
             >
-              Start Free Trial
+              Start Your Trial
             </button>
             <button
               onClick={() => setDemoOpen(true)}
