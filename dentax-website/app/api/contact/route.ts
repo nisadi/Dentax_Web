@@ -79,7 +79,7 @@ export async function POST(req: NextRequest) {
 
   // 4. Build email data
   const submittedAt = sriLankaTime();
-  const recipient   = process.env.CONTACT_EMAIL ?? "nisadiwijerathna@gmail.com";
+  const recipient   = process.env.CONTACT_EMAIL ?? "YOUR_EMAIL";
 
   const adminHtml = buildAdminEmail({
     fullName,
