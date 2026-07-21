@@ -366,12 +366,12 @@ export default function TermsOfServicePage() {
             Welcome to Dentax. These Terms govern the access and use of our dental
             clinic management platform at{" "}
             <a
-              href="https://dentaxweb.globalpearlventures.com/"
+              href="https://dentax.lk/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#16964A] hover:underline"
             >
-              https://dentaxweb.globalpearlventures.com/
+              https://dentax.lk/
             </a>
             . By registering and subscribing, you agree to the terms outlined below.
           </motion.p>

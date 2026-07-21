@@ -323,12 +323,12 @@ export default function PrivacyPolicyPage() {
             partners. This policy outlines how we collect, use, and safeguard
             your data when you use our software platform at{" "}
             <a
-              href="https://dentaxweb.globalpearlventures.com/"
+              href="https://dentax.lk/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#16964A] hover:underline"
             >
-              https://dentaxweb.globalpearlventures.com/
+              https://dentax.lk/
             </a>
           </motion.p>
         </div>

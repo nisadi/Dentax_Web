@@ -322,12 +322,12 @@ export default function CookiePolicyPage() {
             cookies and similar technologies when you visit our website and use our
             dental clinic management platform at{" "}
             <a
-              href="https://dentaxweb.globalpearlventures.com/"
+              href="https://dentax.lk/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#16964A] hover:underline"
             >
-              https://dentaxweb.globalpearlventures.com/
+              https://dentax.lk/
             </a>
             .
           </motion.p>
