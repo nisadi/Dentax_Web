@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Mail, Phone, Building2 } from "lucide-react";
+import RequestDemoModal from "@/components/RequestDemoModal/RequestDemoModal";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
@@ -15,7 +17,7 @@ const contacts = [
   {
     icon: Phone,
     heading: "Call Us",
-    value: "+94 77 2613 863",
+    value: "+94 74 124 7553",
   },
   {
     icon: Building2,
@@ -36,6 +38,11 @@ const fadeUp = {
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export default function ContactCTA() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <section id="footcontact" className="py-8 md:py-16 lg:py-14 px-5 md:px-8 lg:px-6 bg-[#F7FCFB] overflow-hidden">
       <div className="mx-auto max-w-[1440px] flex flex-col gap-8 lg:gap-6">
@@ -127,16 +134,19 @@ export default function ContactCTA() {
                 >
                   Start Your Trial
                 </motion.a>
-                <motion.a
-                  href="#contact"
+                <motion.button
+                  onClick={openModal}
                   whileHover={{ backgroundColor: "#fff", color: "#0F8A56", scale: 1.04 }}
                   transition={{ duration: 0.2 }}
                   aria-label="Book a Personalized Demo"
-                  className="flex h-[48px] sm:h-[52px] items-center justify-center rounded-full px-6 sm:px-8 text-sm md:text-base font-semibold text-white w-full sm:w-auto"
-                  style={{ border: "1.5px solid rgba(255,255,255,0.9)" }}
+                  className="flex h-[48px] sm:h-[52px] items-center justify-center rounded-full px-6 sm:px-8 text-sm md:text-base font-semibold text-white w-full sm:w-auto cursor-pointer"
+                  style={{ 
+                    border: "1.5px solid rgba(255,255,255,0.9)",
+                    background: "transparent",
+                  }}
                 >
                   Book a Personalized Demo
-                </motion.a>
+                </motion.button>
               </div>
             </div>
 
@@ -166,6 +176,8 @@ export default function ContactCTA() {
         </motion.div>
 
       </div>
+
+      <RequestDemoModal open={isModalOpen} onClose={closeModal} />
     </section>
   );
 }

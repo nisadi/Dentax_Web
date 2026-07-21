@@ -19,9 +19,9 @@ const featureLinks = [
 ];
 
 const contactItems = [
-  { icon: Phone, label: "0778673863", href: "tel:0778673863" },
-  { icon: Mail, label: "info@dentax.com", href: "mailto:info@globalpearlventures.com" },
-  { icon: MapPin, label: "Colombo, Sri Lanka", href: "#" },
+  { icon: Phone, label: "0741247553", href: "tel:0741247553" },
+  { icon: Mail, label: "info@globalpearlventures.com", href: "mailto:info@globalpearlventures.com" },
+  { icon: MapPin, label: "Colombo, Sri Lanka", href: "https://maps.app.goo.gl/5HQfEKEqgSHV66f1A" },
 ];
 
 const bottomLinks = [
@@ -156,6 +156,9 @@ export default function Footer() {
         >
           <p className="text-[14px] mb-3 mt-3 font-medium text-white text-center">
             © 2026 Dentax. All rights reserved.
+          </p>
+          <p className="text-[12px] mb-3 mt-0 font-medium text-white text-center">
+            Powered by Global Pearl Ventures.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-1">
             {bottomLinks.map(({ label, href }) => (

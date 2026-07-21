@@ -75,7 +75,7 @@ export default function Navbar() {
             className="flex items-center gap-2"
           >
             <FaWhatsapp size={22} color="#25D366" />
-            <span className="text-sm font-semibold text-[#111827]">+94 77 867 3863</span>
+            <span className="text-sm font-semibold text-[#111827]">+94 74 124 7553</span>
           </a>
 
           <a
@@ -119,9 +119,9 @@ export default function Navbar() {
               {label}
             </a>
           ))}
-          <a href="https://wa.me/94778673863" className="flex items-center gap-2 text-sm font-semibold text-[#111827]">
+          <a href="https://wa.me/94741247553" className="flex items-center gap-2 text-sm font-semibold text-[#111827]">
             <FaWhatsapp size={20} color="#25D366" />
-            +94 77 867 3863
+            +94 74 124 7553
           </a>
           <a href="#login" className="w-full rounded-full border border-[#0F8F5B] py-2 text-center text-sm text-[#0F8F5B]">Login</a>
           <button onClick={() => { setDemoOpen(true); setMenuOpen(false); }} className="w-full rounded-full bg-[#0F8F5B] py-2 text-center text-sm text-white" style={{ border: "none", cursor: "pointer" }}>Request Demo</button>
