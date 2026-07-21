@@ -68,7 +68,7 @@ export default function Navbar() {
         {/* Right Side */}
         <div className="hidden md:flex items-center gap-4">
           <a
-            href="https://wa.me/94778673863"
+            href="https://wa.me/94741247553"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"
