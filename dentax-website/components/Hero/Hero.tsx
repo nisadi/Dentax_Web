@@ -21,9 +21,9 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="bg-[#EEF6FF] pt-10 pb-10 overflow-hidden"
+      className="bg-[#EEF6FF] pt-10 pb-10 overflow-hidden relative"
     >
-      <div className="mx-auto max-w-[1440px] px-5 md:px-8 lg:px-6 flex flex-col lg:flex-row items-center gap-8 lg:gap-5">
+      <div className="mx-auto max-w-[1440px] px-5 md:px-8 lg:px-6 flex flex-col lg:flex-row items-center gap-8 lg:gap-5 relative z-10">
         {/* Left Content */}
         <div className="w-full lg:w-[45%] flex flex-col gap-5">
           {/* Heading */}
@@ -94,6 +94,41 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      {/* Floating NBSQA Image */}
+      <a
+        href="https://nbqsa.com/winners-circle-2026/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="absolute bottom-6 right-6 md:bottom-2 md:right-4 lg:right-2 z-20 transition-transform duration-300 hover:scale-105 hover:-translate-y-2 hidden sm:block"
+        aria-label="NBSQA Winners Circle 2026"
+      >
+        <Image
+          src="/NBQSA.png"
+          alt="NBSQA Winner"
+          width={120}
+          height={120}
+          className="object-contain drop-shadow-lg md:w-[150px] md:h-[150px]"
+        />
+      </a>
+
+      {/* Mobile version positioned slightly differently to avoid WhatsApp icon overlap */}
+      <a
+        href="https://nbqsa.com/winners-circle-2026/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="absolute bottom-4 left-4 z-20 transition-transform duration-300 hover:scale-105 sm:hidden"
+        aria-label="NBSQA Winners Circle 2026"
+      >
+        <Image
+          src="/NBQSA.png"
+          alt="NBSQA Winner"
+          width={100}
+          height={100}
+          className="object-contain drop-shadow-md"
+        />
+      </a>
+
       <RequestDemoModal open={demoOpen} onClose={() => setDemoOpen(false)} />
     </section>
   );

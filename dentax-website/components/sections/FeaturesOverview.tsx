@@ -204,19 +204,19 @@ export default function FeaturesOverview() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="relative overflow-visible rounded-2xl shadow-xl"
+          className="relative overflow-hidden lg:overflow-visible rounded-2xl shadow-xl"
           style={{
             background:
               "linear-gradient(135deg,#1B9B52 0%,#188848 50%,#116E3A 100%)",
           }}
         >
-          <div className="relative px-8 py-10 lg:px-12 lg:py-14">
+          <div className="relative px-6 py-8 sm:px-8 sm:py-10 lg:px-12 lg:py-14">
             
             {/* ── Flex Container ── */}
-            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-8">
+            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
               
               {/* 1. Left: AI Assistant Heading & Description */}
-              <div className="flex flex-col mt-10 gap-5 shrink-0 lg:w-[250px]">
+              <div className="flex flex-col text-center lg:text-left gap-4 shrink-0 lg:w-[250px] lg:mt-10">
                 <h3 className="text-white font-bold text-[28px] lg:text-[32px] leading-tight">
                   AI Assistant
                 </h3>
@@ -238,15 +238,15 @@ export default function FeaturesOverview() {
                 <Image
                   src="/images/bot.png"
                   alt="AI Assistant"
-                  width={160}
-                  height={250}
-                  className="object-contain"
+                  width={140}
+                  height={220}
+                  className="object-contain w-[140px] h-[220px] lg:w-[160px] lg:h-[250px]"
                   priority
                 />
               </motion.div>
 
               {/* 3. Feature Points Grid */}
-              <div className="grid grid-cols-2 gap-x-4 gap-y-6 flex-1" style={{ columnGap: '8px', maxWidth: '600px' }}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 flex-1 w-full lg:max-w-[600px] z-10 relative">
                 {aiFeatures.map(({ icon: Icon, label}, i) => (
                   <motion.div
                     key={label}
@@ -255,16 +255,16 @@ export default function FeaturesOverview() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: i * 0.08, ease: "easeOut" as const }}
                     whileHover={{ x: 6, transition: { duration: 0.2 } }}
-                    className="flex items-center gap-3 cursor-default"
+                    className="flex items-center gap-3 cursor-default bg-white/5 rounded-xl p-3 lg:bg-transparent lg:p-0 border border-white/10 lg:border-none"
                   >
                     {/* Icon box */}
                     <div
                       className="flex items-center justify-center shrink-0 rounded-[10px]"
-                      style={{ width: 32, height: 32, background: "rgba(255,255,255,0.18)" }}
+                      style={{ width: 36, height: 36, background: "rgba(255,255,255,0.18)" }}
                     >
-                      <Icon size={16} className="text-white" />
+                      <Icon size={18} className="text-white" />
                     </div>
-                    <span className="text-white font-semibold text-[13px] lg:text-[14px] leading-snug whitespace-nowrap">{label}</span>
+                    <span className="text-white font-semibold text-[13px] lg:text-[14px] leading-snug">{label}</span>
                   </motion.div>
                 ))}
               </div>
@@ -364,7 +364,7 @@ export default function FeaturesOverview() {
             whileHover={{ y: -4, transition: { duration: 0.25 } }}
             className="bg-[#F8FAFC] rounded-2xl border border-gray-200/50 p-6 md:col-span-2 flex flex-col gap-4"
           >
-            <div className="flex flex-row items-center gap-6">
+            <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 w-full">
               {/* Left: Title and Description */}
               <div className="flex flex-col gap-1 text-left shrink-0">
                 <h3 className="font-bold text-[24px] text-[#111827]">Seamless</h3>
@@ -373,17 +373,17 @@ export default function FeaturesOverview() {
               </div>
               
               {/* Right: All icons inside one white rectangle */}
-              <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100 flex-1">
-                <div className="grid grid-cols-4 gap-6">
+              <div className="bg-white rounded-xl p-4 sm:p-5 shadow-sm border border-gray-100 w-full flex-1">
+                <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 sm:gap-6">
                   {integrations.map(({ icon: Icon, label, bg, color }) => (
                     <div key={label} className="flex flex-col items-center gap-2">
                       <div
-                        className="w-12 h-12 rounded-full flex items-center justify-center shrink-0"
+                        className="w-11 h-11 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 transition-transform hover:scale-105"
                         style={{ backgroundColor: bg }}
                       >
-                        <Icon size={22} style={{ color }} />
+                        <Icon size={20} style={{ color }} />
                       </div>
-                      <span className="text-[11px] text-gray-600 text-center leading-tight font-medium">{label}</span>
+                      <span className="text-[10px] sm:text-[11px] text-gray-600 text-center leading-tight font-medium px-1">{label}</span>
                     </div>
                   ))}
                 </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { span } from "framer-motion/client";
 import {
   Building2,
   CheckCircle,
@@ -206,6 +207,7 @@ function PriceSummary() {
             fontWeight: 700,
             color: "#0E8B45",
             letterSpacing: "0.06em",
+            marginBottom: 8,
           }}
         >
           MONTHLY
@@ -217,15 +219,16 @@ function PriceSummary() {
               fontWeight: 700,
               color: "#0E8B45",
               lineHeight: 1,
+              marginBottom: 8,
             }}
           >
-            LKR 9,900
+            LKR 19,900
           </span>
           <span
             style={{
-              fontSize: 14,
+              fontSize: 13,
               color: "#6B7280",
-              marginBottom: 2,
+              marginBottom: 8,
             }}
           >
             /month
@@ -240,13 +243,15 @@ function PriceSummary() {
             flex: 1,
             height: 1,
             background: "#E5E7EB",
+
           }}
         />
         <span
           style={{
-            fontSize: 12,
+            fontSize: 11,
             fontWeight: 600,
             color: "#6B7280",
+            marginBottom: 8,
           }}
         >
           OR
@@ -268,6 +273,7 @@ function PriceSummary() {
             fontWeight: 700,
             color: "#0E8B45",
             letterSpacing: "0.06em",
+            marginBottom: 12,
           }}
         >
           ANNUAL (SAVE 15%)
@@ -281,18 +287,18 @@ function PriceSummary() {
               lineHeight: 1,
             }}
           >
-            LKR 100,980
+            LKR 202,980
           </span>
           <span
             style={{
-              fontSize: 18,
+              fontSize: 14,
               fontWeight: 400,
               color: "#9CA3AF",
               textDecoration: "line-through",
               marginBottom: 1,
             }}
           >
-            LKR 118,800
+            LKR 238,800
           </span>
         </div>
       </div>
@@ -311,9 +317,11 @@ function PriceSummary() {
             fontSize: 13,
             fontWeight: 600,
             color: "#0E8B45",
+            marginBottom: 6,
+            marginTop: 8,
           }}
         >
-          Save LKR 17,820 with annual billing
+          Save LKR 35,820 with annual billing
         </span>
       </div>
 
